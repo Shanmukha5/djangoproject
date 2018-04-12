@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'website/base.css' %}" />
+<html>
+	<head>
+		<title>Django Website | Contact</title>
+	</head>
+
+	<body>
+		<h1>Contact Form</h1>
+		<form method='POST'>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type='submit' value='Submit'>
+
+
+		</form>
+	</body>
+
+</html>
